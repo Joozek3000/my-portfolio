@@ -1,0 +1,36 @@
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Adjust the number of columns as needed */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+  height: 50vh;
+  width: 100vw;
+}
+
+.portfolio-item {
+  border: 1px solid var(--accent-100);
+  border-radius: 8px;
+  overflow: hidden; /* In case of images larger than the item container */
+  cursor: pointer; /* Indicates that items are clickable */
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto; /* Adjust height as needed, or use 'cover' for a fixed height */
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.portfolio-item h3 {
+  color: var(--text-100);
+}
+
+.portfolio-item p {
+  color: var(--text-200);
+}

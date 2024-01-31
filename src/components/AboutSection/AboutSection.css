@@ -1,0 +1,22 @@
+.about-section {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Spacing between text and image */
+}
+
+.about-text {
+  flex: 1; /* Takes up half of the space */
+  text-align: center;
+  margin: 20px;
+}
+
+.about-image {
+  flex: 1; /* Takes up the remaining half of the space */
+  order: 2; /* Pushes the image to the right */
+}
+
+.about-image img {
+  width: 100%; /* Make the image responsive */
+  height: auto;
+}

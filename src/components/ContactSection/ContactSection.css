@@ -1,0 +1,30 @@
+.contact-section {
+  background-color: var(--bg-200);
+  color: var(--text-100);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+  text-align: center;
+  height: 100vh;
+  width: 100vh;
+}
+
+.contact-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contact-section p,
+.contact-section a {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.contact-section a {
+  color: #0077b5; /* LinkedIn's brand color, adjust if needed */
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
