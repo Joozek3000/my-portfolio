@@ -4,22 +4,27 @@
   align-items: center;
   padding: 10px 20px;
   color: #929292;
-  position: fixed; /* To make it stay at the top */
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Ensures it stays above other content */
+  z-index: 1000;
   transition: all 0.3s ease-in-out;
-  box-shadow: none; /* No shadow for a clean look */
-  background-color: var(--bg-300);
+  box-shadow: none;
+  background-color: var(--bg-300); /* Default background color */
   color: var(--text-100);
 }
 
-/* Add rounded corners and make it slightly transparent on scroll */
+/* Modify the scrolled class to include link color changes */
 .header.scrolled {
-  border-radius: 25px; /* Rounded corners */
-  /* padding: 5px 40px; Smaller padding */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
+  background-color: var(
+    --primary-300
+  ); /* Updated background color when scrolled */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Update link colors when header is scrolled */
+.header.scrolled .nav-container a {
+  color: var(--bg-100); /* New color for better visibility */
 }
 
 .logo-container h1 {
@@ -29,10 +34,10 @@
 }
 
 .nav-container {
-  flex-grow: 1; /* Allows the container to take up all available space */
+  flex-grow: 1;
   display: flex;
-  justify-content: flex-end; /* Center the navigation links horizontally */
-  align-items: center; /* Center the navigation links vertically */
+  justify-content: flex-end;
+  align-items: center;
   padding-right: 80px;
 }
 
@@ -48,7 +53,7 @@
 
 .header nav ul li a {
   text-decoration: none;
-  color: var(--text-100); /* Use the CSS variable for text color */
+  color: var(--text-100); /* Initial color */
   font-size: 1rem;
   padding: 5px 10px;
 }
@@ -59,12 +64,6 @@
   border-bottom: 2px solid var(--primary-200);
 }
 
-/* This ensures that the navbar links are not underlined by default */
-.header nav ul li a {
-  text-decoration: none;
-}
-
-/* Responsive styles for smaller screens */
 @media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -83,6 +82,6 @@
   }
 
   .header.scrolled {
-    border-radius: 0; /* Remove border-radius on smaller screens for a full-width bar */
+    border-radius: 0;
   }
 }

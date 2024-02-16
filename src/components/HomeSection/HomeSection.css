@@ -1,10 +1,10 @@
 .home-section {
-  display: flex; /* This makes it a flex container */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  text-align: center;
-  padding: 0;
+  display: flex; /* Continue using flexbox */
+  flex-direction: row; /* Align children horizontally */
+  justify-content: space-between; /* Distribute space between items */
+  align-items: center; /* Keep items vertically centered */
+  text-align: left; /* Align text to the left */
+  padding: 0 5%; /* Add some padding on the sides */
   margin: 0;
   height: 100vh;
   width: 100vw;
@@ -12,49 +12,39 @@
   color: #333;
 }
 
+/* Container for text to align it to the left */
+.text-container {
+  max-width: 50%; /* Limit the width of the text container */
+}
+
 .name-title {
-  font-size: 85px; /* Large font size for the main title */
+  font-size: 85px;
   margin-bottom: 20px;
   color: #f5f5f5;
 }
 
 .subtitle,
 .location {
-  font-size: 32px; /* Smaller font size for
-  
-  the subtitle and location */
+  font-size: 32px;
 }
 
-/* Add styles for the geometric shapes / */
+/* Adjust shape styles if needed */
 .shape {
   position: absolute;
   border-radius: 50%;
 }
 
-/* Example shape styles / */
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid #f9c74f;
-  position: absolute;
-  top: 75%;
-  left: 10%;
-}
-
-.circle {
-  width: 100px;
-  height: 100px;
-  background-color: #f28482;
-  top: 50%;
-  left: 80%;
-}
-
+/* Example shape styles */
+.triangle,
+.circle,
 .square {
-  width: 60px;
-  height: 60px;
-  background-color: #84a59d;
-  bottom: 10%;
-  right: 15%;
+  position: relative; /* You might want to adjust positioning based on your new layout */
+}
+
+/* Additional styles for the image or graphic on the right */
+.graphic-container {
+  max-width: 50%; /* Limit the width, adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
