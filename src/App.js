@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll'; // Assuming react-scroll is used in Header component
 import Circle from './components/circle';
 import Header from './components/Header/Header';
 import HomeSection from './components/HomeSection/HomeSection';
-import PortfolioGrid from './components/PortfolioGrid/PortfolioGrid';
 import AboutSection from './components/AboutSection/AboutSection';
+import PortfolioGrid from './components/PortfolioGrid/PortfolioGrid';
 import ContactSection from './components/ContactSection/ContactSection';
 import Footer from './components/Footer/Footer';
-import './App.css'; // Assuming you have a general App.css for overall styling
+import './App.css'; // Assuming general styling and theme variables are defined here
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -21,10 +22,8 @@ function App() {
   }, []);
 
   const sectionHeight = window.innerHeight;
-  const homeSectionHeight = sectionHeight; // Height of the Home section
-  // const aboutSectionHeight = sectionHeight * 2; // Height of the Home + About sections
+  const homeSectionHeight = sectionHeight;
 
-  // Logic to determine the style of the Circle based on the scrollY value
   const circleStyle = {
     width: '150px',
     height: '150px',
@@ -34,14 +33,17 @@ function App() {
         ? `linear-gradient(55deg, var(--burgundy), var(--bg-100))`
         : `linear-gradient(45deg, var(--primary-200), var(--bg-100))`,
     position: 'absolute',
-    top: scrollY < homeSectionHeight ? '50%' : '50%', // Example of dynamic positioning
+    top: scrollY < homeSectionHeight ? '20%' : '70%',
     left: '27%',
     zIndex: 1000,
+    // Adding transition for smooth animation on scroll
+    transition: 'top 0.5s ease, background 0.5s ease',
   };
 
   return (
     <div className='App'>
       <Header />
+      {/* Circle component now receives inline styles for dynamic positioning and styling */}
       <Circle style={circleStyle} />
       <HomeSection />
       <AboutSection />
